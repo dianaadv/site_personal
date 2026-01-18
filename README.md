@@ -1,0 +1,5 @@
+Acesta este primul meu proiect mare, construit pe măsură ce învățam bazele programării Web. Pot spune că este ”laboratorul” meu, unde am experimentat pentru prima dată HTML, CSS și JavaScript.
+Ce am învățat lucrând la acest proiect: HTML - cum să structurez o pagină, de la secțiuni de blog până la pagini de profil, CSS - cum să adaug culori, să aliniez elementele și să fac site-ul să arate cât mai frumos, JavaScript - într-adevăr, aici a fost cea mai mare provocare! Am învățat cum să fac butoanele să reacționeze, cum să creez jocuri simple și cum să fac paginile interactive.
+De asemenea, am învățat și despre Găzduire (Deployment), cum să încarc un site pe internet folosind Netlify și GitHub.
+Fiind primul meu proiect, codul de aici reflectă primele momente de început. Știu că există greșeli, dar sunt mândră de el pentru că reprezintă progresul meu de la zero. Fiecare eroare de aici a fost o lecție care m-a ajutat să scriu cod mai bun în proiectele următoare!
+Proiectul poate fi vizualizat dând click pe următorul link: https://dianaadv.github.io/site_personal
