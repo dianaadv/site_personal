@@ -1,0 +1,90 @@
+/*General Body & Typography*/
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    /*Limitează lățimea maximă a listei, dar se extinde uniform dacă e loc.*/
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    /*Pentru a curăța float-urile*/
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: #555;
+}
+
+/*Header*/
+header {
+    background: radial-gradient(ellipse at top, #3366CC, #f7e8e1);
+    /*O nuanță profundă de roșu-maroniu, inspirată de culorile tradiționale*/
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #7B3E3E 3px solid;
+    /*O linie subtilă sub header*/
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 2.2em;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+header a:hover {
+    color: #ffd700;
+    /*Un auriu subtil la hover*/
+    font-weight: bold;
+}
+
+
+
+/*Footer*/
+footer {
+    background: radial-gradient(ellipse at top, #3366CC, #f7e8e1);
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.data-postare {
+    color: #777;
+    font-size: 0.9em;
+}

@@ -1,0 +1,123 @@
+body {
+    font-family: 'Georgia', serif;
+    /*Font clasic, elegant*/
+    background-color: #fffaf0;
+    /*Alb-crem, ca o bază de mătase*/
+    color: #4a4a4a;
+    padding: 20px;
+}
+
+.quiz-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fcfcfc;
+    border: 1px solid #e0e0e0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.buton-acasă {
+    /*Poziționare fixă în colțul paginii*/
+    position: fixed;
+    top: 20px;
+    /*Distanță de 20 de pixeli de marginea de sus*/
+    left: 20px;
+    /*Distanță de 20 de pixeli de marginea din stânga*/
+    z-index: 1000;
+    /*Asigură că butonul apare deasupra altor elemente*/
+
+    /*Stil pentru a arăta ca un buton*/
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #3498db;
+    /*Un albastru frumos*/
+    color: white;
+    /*Text alb*/
+    text-decoration: none;
+    /*Elimină sublinierea specifică link-urilor*/
+    border-radius: 5px;
+    /*Colțuri rotunjite*/
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    /*Efect subtil la hover*/
+}
+
+h1 {
+    color: #8b4513;
+    /*Maro închis, elegant*/
+    text-align: center;
+    border-bottom: 2px solid #daa520;
+    /*Linie auriu-ruginiu sub titlu*/
+    padding-bottom: 10px;
+}
+
+.question {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 5px solid #b8860b;
+    /*Accent lateral auriu*/
+    background-color: #f7f3ed;
+}
+
+label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #8b4513;
+    /*Buton maro intens*/
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0, 3s;
+}
+
+button:hover {
+    background-color: #a0522d;
+}
+
+#result {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px solid #daa520;
+    /*Cadru auriu pentru rezultat*/
+    background-color: #fffde7;
+    /*Galben pal, cald*/
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.home-button {
+    /*Elimină stilul implicit de link*/
+    text-decoration: none;
+
+    /*Stiluri de bază pentru buton*/
+    display: inline-block;
+    /*Permite setarea padding-ului*/
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    /*Culoare verde*/
+    color: white;
+    /*Text alb*/
+    border: none;
+    border-radius: 5px;
+    /*Colțuri rotunjite*/
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    position: fixed;
+}
+
+/*Efect vizual la trecerea cu mouse-ul*/
+.home-button:hover {
+    background-color: #45a049;
+}

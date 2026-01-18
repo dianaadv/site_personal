@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joc de sfârșit de an - Reflecții</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: #f5f5f5;
+        padding: 20px;
+      }
+
+      .game-container {
+        max-width: 600px;
+        background: #ffffff;
+        margin: auto;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .question {
+        margin-bottom: 20px;
+      }
+
+      button {
+        display: block;
+        width: 100%;
+        margin: 8px 0;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #43a047;
+      }
+
+      #result {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 20px;
+      }
+
+      .home-button {
+        background: radial-gradient(ellipse at top, #fdf6f0, #f7e8e1);
+        margin: 0;
+        background: white;
+        border: 6px double green;
+        border-radius: 20px;
+        padding: 10px 15px;
+        position: fixed;
+        cursor: pointer;
+        top: 20px;
+        left: 20px;
+        font-size: small;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="home-button">
+      <a href="../../Games/lista-jocuri.html">Înapoi la Jocuri </a>
+    </nav>
+
+    <div class="game-container">
+      <h1>Reflecții de sfârșit de an</h1>
+      <div id="game"></div>
+      <div id="result"></div>
+    </div>
+
+    <script src="../../Games/joc_sfarsit_de_an/script.js"></script>
+  </body>
+</html>

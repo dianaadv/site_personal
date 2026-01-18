@@ -1,0 +1,338 @@
+/* ------------------------- */
+/* PALETĂ SOFT PASTEL */
+/*
+------------------------- */
+:root {
+    --roz-pudra: #ffe6f2;
+    /* foarte deschis,
+crem-roz */
+    --roz-soft: #ffbcd9;
+    /* roz pastel lin */
+    --roz-accent: #ff79b9;
+    /*
+roz mai puternic dar nu neon */
+    --mov-soft: #bda3e6;
+    /* mov angelic foarte blând
+*/
+    --text-soft: #5a3d56;
+    /* mov cald, perfect lizibil */
+    --alb-cremos: #fff8fc;
+}
+
+/* ------------------------- */
+/* GLOBAL STYLES */
+/*
+------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(140deg, var(--alb-cremos),
+            var(--roz-pudra), var(--mov-soft));
+    font-family: 'Poppins', sans-serif;
+    color:
+        var(--text-soft);
+    min-height: 100vh;
+}
+
+/* ------------------------- */
+/* HEADER
+*/
+/* ------------------------- */
+header {
+    width: 100%;
+    background: rgba(255,
+            255, 255, 0.45);
+    backdrop-filter: blur(8px);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.blog-header {
+    font-size: larger;
+}
+
+/* ------------------------- */
+/* LOGO */
+/* ------------------------- */
+.logo {
+    font-family: 'Sacramento', cursive;
+    font-size: 48px;
+    color: var(--roz-accent);
+    /* roz calm, cald, vizibil fără
+lumină prea puternică */
+    text-shadow: 0 0 5px rgba(255, 180, 210, 0.4);
+}
+
+.logo-simbol {
+    font-size: 1.6em;
+    color: #ff79b9;
+}
+
+
+h1:hover .logo-simbol {
+    font-size: 1.5em;
+    /*Adaugă o tranziție pentru efecte subtile (opțional)*/
+    transition: transform 0.2s ease-in-out;
+    z-index: 200;
+}
+
+/*PASUL CRUCIAL: Activeaza Flexbox si Aliniaza la Centru*/
+h1 {
+    /*Transforma h1 intr-un container flexibil*/
+    display: flex;
+    /*Aliniaza elementele (imaginea si textul) pe verticala (cross axis)*/
+    align-items: center;
+    /*Optional: Elimina spatiile implicite ale h1*/
+    margin: 0;
+    padding: 0;
+}
+
+/*Stiluri pentru Imagine*/
+.logo-imagine {
+    /*Dimensiunea imaginii*/
+    height: 3.5em;
+    width: auto;
+    /*Optional: spatiu intre imagine si text*/
+    margin-right: 0.25em;
+    /*Neavand "vertical-align: middle;" aici, Flexbox se ocupa de aliniere*/
+    border-radius: 100px;
+    animation: pulser 1.5s ease-in-out infinite;
+    display: block;
+}
+
+.logo-imagine:hover {
+    animation: pulser 1.5s ease-in-out infinite;
+}
+
+/*Stiluri pentru text*/
+.logo-text {
+    /*Optional: daca textul pare ciudat, acest stil il poate ajuta*/
+    display: block;
+    font-size: smaller;
+    animation: pulser 1.5s ease-in-out infinite;
+}
+
+.logo-text:hover {
+    animation: pulser 1.5s ease-in-out infinite;
+}
+
+.cuvant-jos {
+    /*Exemplu: Muta "Sarutare" 40 px spre dreapta*/
+    margin-left: 40px;
+}
+
+/*Daca doriti sa-l mutati spre stanga: */
+/* .cuvant-jos {
+    margin-left: -15px;
+}
+
+/*
+------------------------- */
+/* NAVBAR */
+/* ------------------------- */
+nav ul {
+    list-style: none;
+    display: block;
+    gap: 20px;
+    font-family: 'Sacramento',
+        cursive;
+    font-size: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:
+        var(--text-soft);
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    font-size: smaller;
+}
+
+nav ul li a:hover {
+    background: var(--roz-soft);
+}
+
+/*
+------------------------- */
+/* RADIO PLAYER */
+/* ------------------------- */
+.radio-button-container {
+    background: linear-gradient(140deg, var(--alb-cremos),
+            var(--mov-soft), var(--roz-pudra));
+    padding: 0 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(200, 150, 180, 0.2);
+    text-align:
+        center;
+    position: relative;
+    top: 10px;
+    right: 10px;
+    z-index: 2000;
+    border: 1px solid rgba(255, 200, 230, 0.8);
+}
+
+.radio-button-container .radio-title {
+    color:
+        var(--text-soft);
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: 'Sacramento', cursive;
+    text-align: right;
+    white-space: nowrap;
+}
+
+audio {
+    width: 240px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+
+/* ------------------------- */
+/* HERO */
+/* ------------------------- */
+.hero {
+    padding: 110px 5% 70px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size:
+        3.2rem;
+    font-family: 'Sacramento', cursive;
+    color: var(--roz-accent);
+    text-shadow: 0 0 6px rgba(255, 200, 220, 0.6);
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.hero .description {
+    font-size:
+        1.2rem;
+    max-width: 650px;
+    margin: auto;
+    color: var(--text-soft);
+}
+
+/*
+------------------------- */
+/* CONTACT */
+/* ------------------------- */
+#contact {
+    background: var(--alb-cremos);
+    padding: 60px 5%;
+    text-align: center;
+    border-radius: 25px;
+    margin: 40px 5%;
+    box-shadow: inset 0 0 20px rgba(255, 180,
+            210, 0.15);
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color:
+        var(--roz-accent);
+}
+
+.contact-details a {
+    color: var(--roz-accent);
+    font-weight:
+        bold;
+}
+
+/* ------------------------- */
+/* SOCIAL LINKS */
+/*
+------------------------- */
+.social-links a {
+    color: var(--roz-accent);
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--roz-soft);
+}
+
+/* ------------------------- */
+/* FOOTER */
+/*
+------------------------- */
+footer {
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 18px;
+    color: var(--text-soft);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 200, 230, 0.6);
+}
+
+/* -------------------------
+*/
+/* MOBILE FRIENDLY */
+/* ------------------------- */
+@media (max-width: 768px) {
+    nav ul {
+        display: block;
+        font-family: 'Sacramento', cursive;
+    }
+}
+
+
+.has-new-content a:after {
+    content: "⭐️";
+    /*Textul etichetei*/
+    background-color: #00bfff;
+    color: white;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 0.6em;
+    font-weight: bold;
+    margin-left: 5px;
+    vertical-align: top;
+}
+
+/*Definirea animatiei de puls*/
+@keyframes pulser {
+    0% {
+        transform: scale(1);
+        /*Marimea normala*/
+    }
+
+    50% {
+        transform: scale(1.05);
+        /*Creste usor marimea (cu 5%)*/
+    }
+
+    100% {
+        transform: scale(1);
+        /*Revine la marimea normala*/
+    }
+}
+
+/* 2. Aplicarea animatiei pe clasa "has-new-content" */
+.has-new-content {
+    /*Foarte important pentru animatiile de transformare (scale): */
+    display: block;
+
+    /*Aplicarea animatiei: nume, durata, functie de viteza, repetare*/
+    animation: pulser 1.5s ease-in-out infinite;
+    /* 1.5s = durata mai lenta pentru un puls subtil, ease-in-out = tranzitie lina la inceput si la sfarsit*/
+}

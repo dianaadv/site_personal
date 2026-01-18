@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test de Reziliență Cognitivă</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f4f4f9;
+        color: #333;
+        text-align: center;
+      }
+
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 600px;
+      }
+
+      h1 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      #game-info {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.2em;
+        margin: 15px 0;
+        font-weight: bold;
+      }
+
+      /*Zona principala unde apare cuvantul*/
+      #word-display {
+        font-size: 3.5em; /*Font mare pentru vizibilitate*/
+        font-weight: 900;
+        padding: 20px;
+        height: 1.5em; /*Mentine inaltimea constanta*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+      }
+
+      #button-area {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .color-btn,
+      #btn-start {
+        padding: 15px 25px;
+        margin: 10px 5px;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-weight: bold;
+        font-size: 1em;
+        cursor: pointer;
+        transition: transform 0.1s;
+        width: 45%; /*Doua butoane pe rand*/
+        box-shadow: 0 3px #555;
+        text-shadow: 1px 1px 1px #000;
+      }
+
+      .color-btn:hover,
+      #btn-start:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px #555;
+      }
+
+      /*Culorile pentru feedback*/
+      .correct {
+        background-color: #2ecc71 !important; /*Verde pentru corect*/
+      }
+
+      .wrong {
+        background-color: #e74c3c !important; /*Rosu pentru gresit*/
+      }
+
+      /*Mesajul final si ascunderea elementelor*/
+      #result-message {
+        margin-top: 20px;
+        padding: 15px;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 8px;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      /*Asigura ca butoanele de culoare sunt ascunse la inceput*/
+      .color-btn {
+        display: none;
+      }
+
+      .home-button {
+        background: radial-gradient(ellipse at top, #fdf6f0, #f7e8e1);
+        margin: 0;
+        background: rgba(255, 255, 255, 0.92);
+        border: 3px double #121213;
+        border-radius: 20px;
+        padding: 5px 10px;
+        position: fixed;
+        cursor: pointer;
+        top: 10px;
+        left: 10px;
+        font-size: small;
+        z-index: 1000;
+      }
+
+      .home-button:hover {
+        background-color: #f7e1f5; /*Mov-deschis la hover*/
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <a href="../../Games/lista-jocuri.html" class="home-button"
+        >Înapoi la Jocuri</a
+      >
+    </nav>
+    <div class="container">
+      <h1>Testul de Reziliență Cognitivă</h1>
+      <p>
+        Apasă butonul care corespunde <strong>CULORII VOPSELEI</strong>, nu
+        cuvântului citit. Timp de reacție rapid!
+      </p>
+
+      <div id="game-info">
+        <span id="score-display">Scor: 0</span>
+        <span id="timer-display">Timp: 60s</span>
+      </div>
+
+      <div id="word-display">Apasă START</div>
+
+      <div id="button-area">
+        <button id="btn-start" onclick="startGame()">START JOC</button>
+        <button
+          class="color-btn"
+          data-color:="red"
+          style="background-color: red"
+        >
+          ROȘU
+        </button>
+        <button
+          class="color-btn"
+          data-color:="blue"
+          style="background-color: blue"
+        >
+          ALBASTRU
+        </button>
+        <button
+          class="color-btn"
+          data-color:="green"
+          style="background-color: green"
+        >
+          VERDE
+        </button>
+        <button
+          class="color-btn"
+          data-color:="yellow"
+          style="background-color: gold"
+        >
+          GALBEN
+        </button>
+      </div>
+
+      <div id="result-message" class="hidden"></div>
+    </div>
+
+    <script src="../test_rezilienta_cognitiva/script.js"></script>
+  </body>
+</html>

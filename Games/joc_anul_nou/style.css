@@ -1,0 +1,109 @@
+.sorcova-game {
+    margin: 50px auto;
+    padding: 24px;
+    max-width: 700px;
+    border-radius: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: background 0.6s ease;
+}
+
+.sorcova-game .rubrica {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+/*Iarna*/
+.sorcova-game.winter {
+    background: linear-gradient(#eef6ff, #ffffff);
+    color: #2c2c2c;
+}
+
+/*Primavara*/
+.sorcova-game.spring {
+    background: linear-gradient(#f1f8f4, #ffffff);
+    color: #2f5d3a;
+}
+
+.sorcova-game h2 {
+    margin-bottom: 10px;
+}
+
+#story-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.controls.input {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+button {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: none;
+    background: #b23a48;
+    color: #fff;
+    font-family: inherit;
+}
+
+#game-area {
+    position: relative;
+    height: 260px;
+    max-width: 360px;
+    margin: 20px auto;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.winter #game-area {
+    background: linear-gradient(#dcecff, #ffffff);
+}
+
+.spring #game-area {
+    background: linear-gradient(#dff3e4, #ffffff);
+}
+
+.child {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    font-size: 2rem;
+}
+
+#sorcova {
+    position: absolute;
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+.home-button {
+    background-color: pink;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    border: 6px double #b23a48;
+}
+
+.top-bar {
+    text-align: center
+}
+
+#themeToggle {
+    cursor: pointer;
+}

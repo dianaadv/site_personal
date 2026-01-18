@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f2f1;
+    /*Verde deschis, fundal de padure*/
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(../padurea_de_smarald/padure.jpg);
+}
+
+#container-joc {
+    width: 90%;
+    max-width: 700px;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 5px solid #388e3c;
+    /*Margine verde inchis*/
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #1b5e20;
+    margin-bottom: 20px;
+}
+
+.text-poveste {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: left;
+    padding: 10px;
+    border-left: 3px solid #66bb6a;
+}
+
+.butoane-optiuni {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.butoane-optiuni button {
+    padding: 12px 20px;
+    cursor: pointer;
+    background-color: #4caf50;
+    /*Buton verde*/
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+
+
+.butoane-optiuni button:hover {
+    background-color: #388e3c;
+    transform: translateY(-2px);
+    background-image: url(../padurea_de_smarald/padure.jpg)
+}
+
+.info-animal {
+    background-color: #f1f8e9;
+    border: 1px dashed #a5d6a7;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.final-joc {
+    margin-top: 30px;
+    font-weight: bold;
+    color: #c62828;
+}
+
+.home-button {
+    /*Poziționare fixă în colțul paginii*/
+    position: fixed;
+    top: 20px;
+    /*Distanță de 20 de pixeli de marginea de sus*/
+    left: 20px;
+    /*Distanță de 20 de pixeli de marginea din stânga*/
+    z-index: 1000;
+    /*Asigură că butonul apare deasupra altor elemente*/
+
+    /*Stil pentru a arăta ca un buton*/
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    /*Un albastru frumos*/
+    color: white;
+    /*Text alb*/
+    text-decoration: none;
+    /*Elimină sublinierea specifică link-urilor*/
+    border-radius: 5px;
+    /*Colțuri rotunjite*/
+    font-family: Georgia, serif;
+
+    transition: background-color 0.3s;
+    /*Efect subtil la hover*/
+}

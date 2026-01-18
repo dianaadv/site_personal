@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width, initial-scale=1.0" />
+    <title>Jocuri</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a href="../lista-jocuri.html" class="home-button">Înapoi la Jocuri</a>
+    <div class="game-container">
+      <h1>Alegerea Propriei Povești</h1>
+      <div id="text-display">
+        Bun-venit în povestea ta. Fiecare zi este o nouă decizie.
+      </div>
+
+      <div class="options-container" id="options"></div>
+
+      <div id="result" class="result-message" style="display: none"></div>
+
+      <button
+        id="restart-button"
+        class="option-button"
+        style="display: none"
+        ;
+        margin-top:
+        20px;
+      >
+        Începe din Nou
+      </button>
+    </div>
+
+    <script>
+      //Variabilele globale pentru scor
+      let hopeScore = 0;
+      let acceptanceScore = 0;
+      let questionIndex = 0;
+
+      //Structura intrebarilor si optiunilor
+      const story = [
+        {
+          text: "Într-o seară, derulezi fotografiile prietenilor. Vedeți multe cupluri fericite și simțiți un gol în suflet. Ce faceți?",
+          options: [
+            {
+              text: "Mă blochez pe o poză și îmi spun: 'Așa ar fi trebuit să fiu eu.'",
+              score: { hope: -1, acceptance: 0 },
+            },
+            {
+              text: "Închid telefonul și spun: 'Fiecare cu drumul său. Am alte lucruri de făcut.'",
+              score: { hope: 0, acceptance: 1 },
+            },
+            {
+              text: "Îmi sun o prietenă și o invit la un ceai, mă concentrez pe relațiile pe care le am.",
+              score: { hope: 1, acceptance: 0 },
+            },
+          ],
+        },
+        {
+          text: "Vine o cunoștință și vă întreabă cu subînțeles: 'Ei, dar tu tot singură? Nu ți-ai găsit un om să te așezi la casa ta?'",
+          options: [
+            {
+              text: "Mă simt umilită și schițez un zâmbet forțat, evitând discuția.",
+              score: { hope: -1, acceptance: 0 },
+            },
+            {
+              text: "Răspund calm: 'Sunt la casa mea, iar parteneriatul e o alegere, nu o necesitate.'",
+              score: { hope: 0, acceptance: 1 },
+            },
+            {
+              text: "Glumesc: 'Mă așteaptă un prinț pe un cal mai mare. Am standarde înalte!'",
+              score: { hope: 1, acceptance: 0 },
+            },
+          ],
+        },
+        {
+          text: "Apare un moment de conștientizare acută a lipsei copiilor/familiei dorite. Sunteți la un eveniment de familie.",
+          options: [
+            {
+              text: "Mă izolez, simțind o disperare că nu pot avea 'tot pachetul'.",
+              score: { hope: -2, acceptance: 0 },
+            },
+            {
+              text: "Îmi ofer ajutorul cu nepoții/copiii prietenilor, găsind bucurie în darul de a oferi afecțiune.",
+              score: { hope: 0, acceptance: 2 },
+            },
+            {
+              text: "Îmi reamintesc realizările mele profesionale/personale și mă concentrez pe ele.",
+              score: { hope: 1, acceptance: 1 },
+            },
+          ],
+        },
+        {
+          text: "Cum priviți anii care vin?",
+          options: [
+            {
+              text: "Cu teamă, pentru că sunt singură și nu știu ce va fi.",
+              score: { hope: -1, acceptance: 0 },
+            },
+            {
+              text: "Îmi fac planuri de călătorii și cursuri, investind în propria fericire.",
+              score: { hope: 2, acceptance: 1 },
+            },
+            {
+              text: "Cu o acceptare senină, știind că mă pot baza pe mine însămi.",
+              score: { hope: 1, acceptance: 2 },
+            },
+          ],
+        },
+      ];
+
+      const textDisplay = document.getElementById("text-display");
+      const optionsContainer = document.getElementById("options");
+      const resultDiv = document.getElementById("result");
+      const restartButton = document.getElementById("restart-button");
+
+      //Functia principala care afiseaza o intrebare
+      function loadQuestion() {
+        if (questionIndex >= story.length) {
+          endGame();
+          return;
+        }
+
+        const currentQuestion = story[questionIndex];
+        textDisplay.textContent = currentQuestion.text;
+        optionsContainer.innerHTML = "";
+
+        currentQuestion.options.forEach((option) => {
+          const button = document.createElement("button");
+          button.textContent = option.text;
+          button.classList.add("option-button");
+
+          button.addEventListener("click", () => makeChoice(option.score));
+
+          optionsContainer.appendChild(button);
+        });
+      }
+
+      //Functia care proceseaza alegerea
+      function makeChoice(score) {
+        hopeScore += score.hope;
+        acceptanceScore += score.acceptance;
+        questionIndex++;
+        loadQuestion();
+      }
+
+      //Functia care termina jocul si afiseaza rezultatul
+      function endGame() {
+        optionsContainer.innerHTML = "";
+        textDisplay.textContent =
+          "Drumul s-a încheiat. Iată ce spun alegerile tale:";
+        resultDiv.style.display = "block";
+        restartButton.style.display = "inline-block";
+
+        let resultText = "";
+        let resultClass = "";
+
+        if (hopeScore < 0 && acceptanceScore < 2) {
+          //Domina regretele si disperarea
+          resultText = `💔 Rezultat: Disperare și Regret. Scorul tău sugerează că regretele trecerii timpului te apasă. Nu uita: ești protagonistul propriei tale vieți, nu o victimă a ei. Poți schimba perspectiva oricând!`;
+          resultClass = "dispair";
+        } else if (acceptanceScore >= 4 && hopeScore >= 0) {
+          //Domina acceptarea senina
+          resultText = `✨ Rezultat: Acceptare Senină. Ai transformat visul în realitate. Ești Mireasa vieții tale, îți celebrezi libertatea și ai găsit bucuria în rolurile pe care le ai. Pacea interioară este cel mai frumos accesoriu!`;
+          resultClass = "acceptance";
+        } else {
+          //Un echilibru intre speranta si acceptare
+          resultText = `🌟 Rezultat: Speranță Echilibrată. Păstrezi speranța pentru viitor, dar te ancorezi ferm în prezent. Fericirea vine din interior, nu din validarea externă. Continuă să-ți celebrezi viața unică!`;
+          resultClass = "hope";
+        }
+        resultDiv.textContent = resultText;
+        //Scoate clasele vechi si adauga clasa noua
+        resultDiv.classList.remove("hope", "acceptance", "dispair");
+        resultDiv.classList.add(resultClass);
+      }
+
+      //Functia de repornire
+      restartButton.addEventListener("click", () => {
+        hopeScore = 0;
+        acceptanceScore = 0;
+        questionIndex = 0;
+        resultDiv.style.display = "none";
+        restartButton.style.display = "none";
+        loadQuestion();
+      });
+
+      //Start joc
+      loadQuestion();
+    </script>
+  </body>
+</html>

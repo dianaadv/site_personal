@@ -1,0 +1,156 @@
+/*General Body & Typography*/
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    /*Pentru a curăța float-urile*/
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: #555;
+}
+
+/*Header*/
+header {
+    background: radial-gradient(ellipse at top, #3366CC, #f7e8e1);
+    /*O nuanță profundă de roșu-maroniu, inspirată de culorile tradiționale*/
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #7B3E3E 3px solid;
+    /*O linie subtilă sub header*/
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 2.2em;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+header a:hover {
+    color: #ffd700;
+    /*Un auriu subtil la hover*/
+    font-weight: bold;
+}
+
+/*Main Content - Blog Post*/
+main {
+    padding: 20px 0;
+}
+
+.blog-post {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.post-title {
+    color: #6A0505;
+    /*Un roșu mai intens pentru titlul postării*/
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.post-meta {
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 25px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 15px;
+}
+
+.post-image {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.post-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.introduction {
+    font-size: 1.15em;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 25px;
+    border-left: 5px solid #7B3E3E;
+    padding-left: 15px;
+}
+
+.blog-post h3 {
+    color: #5A2D2D;
+    margin-top: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.blog-post p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/*Footer*/
+footer {
+    background: radial-gradient(ellipse at top, #3366CC, #f7e8e1);
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.data-postare {
+    color: #777;
+    font-size: 0.9em;
+}

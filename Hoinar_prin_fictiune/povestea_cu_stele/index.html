@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bagheta uitată</title>
+    <link
+      rel="stylesheet"
+      href="https://googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* --- Fundalul general --- */
+      body {
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(ellipse at top, #fdf6f0, #f7e8e1);
+        background-attachment: fixed;
+        font-family: "Playfair Display", serif;
+        color: #4a2c2a;
+        line-height: 1.8;
+        overflow-x: hidden;
+      }
+
+      /*Rama aurie*/
+      .frame {
+        max-width: 900px;
+        margin: 60px auto;
+        background: rgba(255, 255, 255, 0.92);
+        border: 6px double #d4af37;
+        border-radius: 20px;
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
+        padding: 50px 70px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /*---Titlu---*/
+      h1 {
+        text-align: center;
+        font-family: "Great Vibes", cursive;
+        font-size: 3.2em;
+        color: #b57ba6;
+        margin-top: 0;
+        text-shadow: 0 0 6px rgba(255, 255, 255, 0.9);
+        z-index: 2;
+        position: relative;
+      }
+
+      h2 {
+        text-align: center;
+        color: #d4af37;
+        font-size: 1.3em;
+        margin-top: -10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 2px dashed #d4af37;
+        width: 60%;
+        margin: 25px auto;
+        opacity: 0.6;
+      }
+
+      p {
+        text-indent: 2em;
+        margin: 15px 0;
+        font-size: 1.1em;
+        z-index: 2;
+        position: relative;
+      }
+
+      .quote {
+        text-align: center;
+        font-style: italic;
+        margin-top: 30px;
+        color: #b57ba6;
+        font-size: 1.1em;
+      }
+
+      /*Stele cazatoare*/
+      .shooting-stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .star {
+        position: absolute;
+        width: 2px;
+        height: 80px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 1),
+          rgba(255, 255, 255, 0)
+        );
+        opacity: 0.8;
+        border-radius: 50%;
+        filter: blur(0.5px);
+        animation: fall linear infinite;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(-10%) translateX(0) rotate(10deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(110%) translateX(50px) rotate(10deg);
+          opacity: 0;
+        }
+      }
+
+      /*Stele unice cu pozitii si timpi diferiti*/
+      .star:nth-child(1) {
+        left: 10%;
+        animation-duration: 6s;
+        animation-delay: 0s;
+      }
+      .star:nth-child(2) {
+        left: 25%;
+        animation-duration: 7s;
+        animation-delay: 2s;
+      }
+      .star:nth-child(3) {
+        left: 50%;
+        animation-duration: 5s;
+        animation-delay: 1s;
+      }
+      .star:nth-child(4) {
+        left: 70%;
+        animation-duration: 8s;
+        animation-delay: 3s;
+      }
+      .star:nth-child(5) {
+        left: 85%;
+        animation-duration: 6s;
+        animation-delay: 4s;
+      }
+      .star:nth-child(6) {
+        left: 40%;
+        animation-duration: 9s;
+        animation-delay: 5s;
+      }
+      .star:nth-child(7) {
+        left: 60%;
+        animation-duration: 7s;
+        animation-delay: 6s;
+      }
+
+      .home-button {
+        background: radial-gradient(ellipse at top, #fdf6f0, #f7e8e1);
+        margin: 0;
+        background: rgba(255, 255, 255, 0.92);
+        border: 6px double #d4af37;
+        border-radius: 20px;
+        padding: 10px 15px;
+        position: fixed;
+        cursor: pointer;
+        top: 60px;
+        left: 20px;
+        font-size: small;
+        z-index: 1000;
+      }
+
+      /*Responsivitate*/
+      @media (max-width: 700px) {
+        .frame {
+          padding: 30px;
+        }
+        h1 {
+          font-size: 2.2em;
+        }
+      }
+    </style>
+
+   
+
+  <body>
+
+    <nav class="home-button">
+      <a href="../index.html">Acasă/HoinarPrinFicțiune</a>
+    </nav>
+
+
+   
+
+    <div class="frame">
+      <div class="shooting-stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+      </div>
+
+      <h1>Bagheta uitată</h1>
+      <h2>O povestire despre magie, copilărie și curajul de a crede</h2>
+      <hr />
+      <p>
+        Într-o seară blândă de vară, o fetiță cu părul ciufulit și genunchii
+        juliți stătea pe treptele casei, ținând în mână o baghetă făcută
+        dintr-un băț și o panglică roz. Nu avea palat, nici rochii
+        strălucitoare, dar avea o inimă care credea în povești.
+      </p>
+
+      <p>
+        ”Astăzi voi fi o prințesă adevărată”, își spuse ea, iar vântul o
+        ascultă. Luna o învălui în lumină, greierii cântau ca într-o orchestră
+        regală, iar norii se retrăgeau rușinați, ca să-i lase cerul doar ei.
+      </p>
+
+      <p>
+        Anii au trecut. Rochia roz s-a pierdut undeva în amintiri, bagheta s-a
+        rupt, dar în adâncul inimii, prințesa aceea nu a plecat niciodată.
+      </p>
+
+      <p>
+        Într-o dimineață ploioasă, femeia devenită mare zări într-o vitrină o
+        baghetă identică. Fără să știe de ce, o cumpără. Când vânzătoarea
+        întrebă dacă e pentru fiica ei, răspunse: ”Nu, e pentru mine.”
+      </p>
+
+      <p>
+        Mai târziu, ploaia o prinse pe stradă. În loc să se ascundă, dansă
+        printre picături, râzând. O fetiță o privi și o întrebă: ”Ești o zână?”
+        - ”Poate că da”, îi zâmbi femeia.
+      </p>
+
+      <p>
+        Într-o zi, dădu bagheta unei alte fetițe triste, spunându-i: ”E magică,
+        dar funcționează doar dacă crezi.” Iar în ochii micuței se aprinse din
+        nou lumina copilăriei.
+      </p>
+
+      <hr />
+
+      <p class="quote">
+        ”Odată ce ești o prințesă a inimii, nu încetezi niciodată să fii.” 🌙
+      </p>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoinar prin Ficțiune</title>
+    <style>
+      /*Stiluri de baza si resetare*/
+      body {
+        font-family: "Georgia", serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background-color: #4caf50; /*Verde padure*/
+        color: white;
+        padding: 1em 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      nav {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /*Stil pentru Butonul de Acasa*/
+      .home-button {
+        background-color: #795548; /*Maro (culoarea cerbului)*/
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .home-button:hover {
+        background-color: #5d4037;
+      }
+
+      main {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1,
+      h2 {
+        color: #4caf50;
+        text-align: center;
+      }
+
+      .content-section {
+        padding: 20px 0;
+      }
+
+      /* ---Stiluri pentru Carusel (fara JavaScript)--- */
+      .carousel-container {
+        text-align: center;
+      }
+
+      .carousel {
+        display: block; /*Aranjeaza imaginile orizontal*/
+        overflow: auto; /*Permite derularea doar pe verticala*/
+        scroll-snap-type: x mandatory; /*Asigura oprirea exact la fiecare imagine*/
+        -webkit-overflow-scrolling: touch; /*Pentru un scroll mai fin pe touchscreen*/
+        border: 5px solid #795548;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        height: 600px; /*Inaltime fixa pentru carusel*/
+      }
+
+      .carousel-slide {
+        flex: 0 0 100%; /*Fiecare slide ocupa 100% din latimea caruselului*/
+        scroll-snap-align: center; /*Pozitioneaza slide-ul in centru cand se opreste scroll-ul*/
+        width: 100%;
+        position: relative;
+        margin: 0;
+      }
+
+      .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /*Asigura ca imaginea acopera intreaga zona fara a fi deformata*/
+        display: block;
+        border-radius: 5px;
+      }
+
+      .carousel-slide figcaption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        font-size: 0.9em;
+      }
+
+      .carousel-nav a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: #795548;
+        color: white;
+        text-decoration: none;
+        line-height: 30px;
+        border-radius: 50%;
+        margin: 0 5px;
+        transition: background-color 0.3s;
+      }
+
+      .carousel-nav a:hover {
+        background-color: #4caf50;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1em 0;
+        background-color: #333;
+        color: white;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html" class="home-button"
+          >🦌 Acasă/ Hoinar prin Ficțiune</a
+        >
+      </nav>
+    </header>
+
+    <main id="top-pagina">
+      <h1>Cerbul: Mândria Pădurii</h1>
+
+      <section class="content-section">
+        <h2>Coroana Ramificată</h2>
+        <p>
+          În inima <em>codrului</em> de fagi, unde lumina soarelui se filtra ca
+          o dantelă aurie, trăia cel mai falnic cerb, numit <em>Stăpânul</em>.
+          El era ușor de recunoscut: coarnele sale mărețe, ramificate, păreau o
+          coroană sculptată din lemnul cel mai vechi al pădurii. Aceste coroane
+          nu erau doar o podoabă, ci și un simbol al vieții, crescând și căzând
+          în fiecare an, ca o reînnoire a promisiunii naturii.
+        </p>
+
+        <p>
+          Odată, un pui de căprioară rănit a fost adus la el de vântul rece.
+          Stăpânul, deși era mândru, avea o inimă blândă. A vegheat asupra
+          puiului zile și nopți, protejându-l de lupi și de furtuni. Văzând
+          această dovadă de compasiune, toate viețuitoarele pădurii, de la cele
+          mai mici albine la urșii cei mari, l-au recunoscut ca pe un
+          <strong style="color: #4caf50"
+            ><em>lider nu doar puternic, ci și drept</em></strong
+          >. De atunci, legenda spune că adevărata putere a Cerbului nu stă în
+          mărimea coarnelor, ci în noblețea spiritului său.
+        </p>
+      </section>
+
+      <hr />
+
+      <section class="content-section carousel-container">
+        <h2>Galerie Foto</h2>
+        <div class="carousel">
+          <figure id="slide-1" class="carousel-slide">
+            <img src="../universul_cerbilor/poza_1.jpg" alt="" />
+          </figure>
+
+          <figure id="slide-2" class="carousel-slide">
+            <img src="../universul_cerbilor/poza_2.jpg" alt="" />
+          </figure>
+
+          <figure id="slide-3" class="carousel-slide">
+            <img src="../universul_cerbilor/poza_3.jpg" alt="" />
+          </figure>
+
+          <figure id="slide-4" class="carousel-slide">
+            <img src="../universul_cerbilor/poza_4.jpg" alt="" />
+          </figure>
+
+          <figure id="slide-5" class="carousel-slide">
+            <img src="../universul_cerbilor/poza_5.jpg" alt="" />
+          </figure>
+
+          <figure id="slide-6" class="carousel-slide">
+            <img src="../universul_cerbilor/poza_7.jpg" alt="" />
+          </figure>
+
+          <figure id="slide-7" class="carousel-slide">
+            <img src="../universul_cerbilor/poza_6.jpg" alt="" />
+          </figure>
+        </div>
+
+        <div class="carousel-nav">
+          <a href="../universul_cerbilor/poza_1.jpg">1</a>
+          <a href="../universul_cerbilor/poza_2.jpg">2</a>
+          <a href="../universul_cerbilor/poza_3.jpg">3</a>
+          <a href="../universul_cerbilor/poza_4.jpg">4</a>
+          <a href="../universul_cerbilor/poza_5.jpg">5</a>
+          <a href="../universul_cerbilor/poza_7.jpg">6</a>
+          <a href="../universul_cerbilor/poza_6.jpg">7</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Copyright&copy; 2025 - Povestiri despre Cerbi</p>
+    </footer>
+  </body>
+</html>

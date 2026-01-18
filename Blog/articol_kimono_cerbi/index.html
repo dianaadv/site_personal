@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <style>
+      /*Paleta de culori inspirata de toamna: */
+      :root {
+        --color-primary: #8b4513; /*Maro inchis, pamantiu*/
+        --color-secondary: #cd5c5c; /*Rosu ruginiu, artar*/
+        --color-accent: #ffd700; /*Auriu, lumina de toamna*/
+        --color-background: #fff8dc; /*Alb-galbui, pergament*/
+        --color-text: #36454f; /*Gri carbune, text principal*/
+      }
+
+      /*Stiluri generale*/
+      body {
+        font-family: "Georgia", serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: var(--color-background);
+        color: var(--color-text);
+      }
+
+      main {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0 0.1);
+        border-radius: 8px;
+      }
+
+      /*Antet (Header)*/
+      header {
+        text-align: center;
+        padding: 30px 20px;
+        background-color: var(--color-primary);
+        color: white;
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+        margin-bottom: 5px;
+        color: var(--color-accent);
+      }
+
+      header .subtitle {
+        font-style: italic;
+        opacity: 0.8;
+      }
+
+      /*Butonul Acasa*/
+      #home-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 10px 15px;
+        background-color: var(--color-secondary);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      #home-button:hover {
+        background-color: #a52a2a; /*Rosu mai intens*/
+      }
+
+      /*Continutul articolului*/
+      article h2 {
+        color: var(--color-secondary);
+        border-bottom: 2px solid var(--color-accent);
+        padding-bottom: 5px;
+        margin-top: 30px;
+      }
+
+      .meta {
+        font-size: 0.9em;
+        color: #6c757d;
+        text-align: center;
+        margin-bottom: 20px;
+        display: block;
+      }
+
+      .conclusion {
+        font-style: italic;
+        padding: 15px;
+        border-left: 5px solid var(--color-primary);
+        background-color: #f9f4ec;
+      }
+
+      /*Imagini*/
+      .image-section {
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      .article-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      figcaption {
+        font-style: italic;
+        font-size: 0.85em;
+        color: #555;
+        margin-top: 8px;
+      }
+
+      /*Subsol (Footer)*/
+      footer {
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+        background-color: var(--color-text);
+        color: white;
+        font-size: 0.8em;
+      }
+
+      /*Responsivitate de baza*/
+      @media (max-width: 600px) {
+        main {
+          margin: 20px;
+          padding: 15px;
+        }
+        header h1 {
+          font-size: 1.8em;
+        }
+        #home-button {
+          position: static;
+          margin-bottom: 15px;
+          display: block;
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <button id="home-button">⬅️ Blog/ Lista Articolelor Principale</button>
+      <h1>Cerbul: Majestatea Tăcută a Pădurii</h1>
+      <p class="subtitle">
+        O incursiune în lumea celui mai nobil locuitor al codrului.
+      </p>
+    </header>
+
+    <main>
+      <article>
+        <p class="meta">Publicat de Dianaa_Dv pe 18 Octombrie 2025</p>
+
+        <section class="intro">
+          <p>
+            Pentru că îmi doream să scriu un nou articol pe Blog, m-am gândit să
+            scriu despre frumusețea Cerbului și ce putem învăța de la el.
+            Desigur, dacă nu aveam șansa să ajung la Ferma de Cerbi, nu aș fi
+            scris despre ei... dar, spre fericirea mea, norocul mi-a surâs...
+          </p>
+          <p>
+            Toamna aduce cu ea o paletă de culori calde, parfum de frunze uscate
+            și, în adâncul pădurii, un ecou al sălbăticiei:
+            <strong style="color: #cd5c5c"><em>răgetul cerbului</em> </strong>.
+            Aceste creaturi impunătoare, cu o prezență regală, sunt considerate
+            simboluri ale naturii neîmblânzite și ale ciclului vieții.
+          </p>
+        </section>
+
+        <section class="image-section">
+          <figure>
+            <img
+              src="../articol_cerbi/poza1.JPG"
+              alt="Cerbul in toata frumusețea lui"
+              class="article-image"
+            />
+            <figcaption>Cerbul în toată frumusețea lui</figcaption>
+          </figure>
+        </section>
+
+        <h2>Anatomia și Comportamentul</h2>
+        <p>
+          Cerbul (<em>Cervus elaphus</em>), în special masculul, este ușor de
+          recunoscut după <strong style="color: #8b4513">coarnele</strong> sale
+          impresionante. Acestea nu sunt permanente; ele cad în fiecare
+          primăvară și cresc la loc, devenind tot mai mari și mai ramificate cu
+          fiecare an, un indicator al vârstei și al sănătății animalului.
+        </p>
+
+        <p>
+          Sunt animale preponderent nocturne și crepusculare, iar dieta lor este
+          alcătuită din ierburi, frunze, muguri și scoarță. În perioada de
+          <strong style="color: #8b4513">împerechere</strong>, care are loc
+          toamna, masculii se luptă adesea pentru a-și stabili dominația și a
+          atrage femelele (ciutele).
+        </p>
+
+        <section class="image-section">
+          <figure>
+            <img
+              src="../articol_cerbi/poza_2.JPG"
+              alt=""
+              class="article-image"
+            />
+            <figcaption>Detalii regale: Coarne de Cerb</figcaption>
+          </figure>
+        </section>
+
+        <h2>Cerbul în Cultură și Simbolism</h2>
+        <p>
+          De-a lungul istoriei, cerbul a ocupat un loc de cinste în mitologie și
+          artă. În multe culturi, el simbolizează
+          <strong style="color: #8b4513">regenerarea</strong> (datorită
+          pierderii și recreșterii coarnelor),
+          <strong style="color: #8b4513">grația</strong>,
+          <strong style="color: #8b4513">noblețea</strong> și legătura dintre
+          cer și pământ. De asemenea, este un simbol puternic al
+          <strong style="color: #8b4513">toamnei</strong> și al schimbării.
+        </p>
+
+        <h2>Ce putem învăța de la Cerbi:</h2>
+
+        <p class="intro-text">
+          Dincolo de mugetele impresionante și coarnele maiestuoase, putem
+          extrage câteva lecții valoroase despre cum să navigăm prin propria
+          noastră viață.
+        </p>
+
+        <section class="lesson">
+          <h2 class="lesson-title">
+            1. Renunțarea și Reînnoirea
+            <span class="subtitle">(Puterea de a lăsa în urmă)</span>
+          </h2>
+          <p>
+            Cea mai frumoasă lecție a cerbului vinde de la
+            <em>coarnele</em> sale. În fiecare an, masculul renunță la vechile
+            structuri osoase, indiferent cât de impunătoare ar fi fost. Această
+            <em>renunțare</em> anuală face loc pentru o creștere și mai
+            puternică și mai ramificată.
+          </p>
+          <ul>
+            <li>
+              <strong>Lecția: </strong> Trebuie să învățăm să lăsăm în urmă
+              eșecurile, vechile obișnuințe sau relațiile care nu ne mai
+              servesc. Curajul de a renunța la ceea ce a fost (chiar dacă a fost
+              glorios) este primul pas spre o reînnoire și o evoluție mai mare.
+            </li>
+          </ul>
+        </section>
+
+        <section class="lesson">
+          <h2 class="lesson-title">
+            2. Smerenia în Forță
+            <span class="subtitle">(Grația în mișcare)</span>
+          </h2>
+          <p>
+            În ciuda mărimii și puterii lor, cerbii se mișcă cu o
+            <em>eleganță</em> și o <em>liniște</em> uimitoare. Ei nu se folosesc
+            de forța lor decât atunci când este absolut necesar, cum ar fi in
+            timpul împerecherii. În rest, ei pășesc cu prudență și grație.
+          </p>
+          <ul>
+            <li>
+              <strong>Lecția:</strong>Puterea adevărată nu stă în etalarea
+              constantă, ci în stăpânirea de sine și în grația acțiunilor
+              noastre.
+            </li>
+          </ul>
+        </section>
+
+        <section class="lesson">
+          <h2 class="lesson-title">
+            3. Adaptarea constantă
+            <span class="subtitle">(Supraviețuirea în pădure)</span>
+          </h2>
+          <p>
+            Cerbii sunt capabili să își modifice dieta și comportamentul în
+            funcție de anotimp. Ei navighează prin ierni geroase și veri uscate,
+            găsind resurse acolo unde alții nu le văd.
+          </p>
+          <ul>
+            <li>
+              <strong>Lecția:</strong>Viața ne aruncă mereu provocări noi. Nu
+              putem controla mediul, dar putem controla cât de
+              <em>flexibili</em> și <em>adaptabili</em> suntem. Capacitatea de a
+              schimba planul fără a renunța la obiectiv este cheia
+              supraviețuirii pe termen lung.
+            </li>
+          </ul>
+        </section>
+
+        <section class="lesson">
+          <h2 class="lesson-title">
+            4. Ascultarea de sine
+            <span class="subtitle">(Simțurile Ascuțite)</span>
+          </h2>
+          <p>
+            Cerbii trăiesc în armonie cu mediul lor, fiind ghidați de simțuri
+            extraordinar de ascuțite. Ei nu ignoră instinctul, ci se bazează pe
+            el pentru a detecta pericolul sau pentru a găsi hrana.
+          </p>
+          <ul>
+            <li>
+              <strong>Lecția:</strong>Într-o lume plină de zgomot, trebuie să ne
+              reconectăm cu <em>intuiția</em> noastră interioară. Să acordăm
+              atenție semnelor subtile ale corpului și minții, deoarece de multe
+              ori instinctul știe calea cea mai sigură.
+            </li>
+          </ul>
+        </section>
+
+        <hr />
+        <p class="conclusion">
+          Data viitoare când vei face o plimbare în pădure, oprește-te și
+          ascultă. Poate vei avea șansa să întâlnești, chiar și cu ochiul
+          minții, majestatea tăcută a cerbului, purtătorul coroanei de os al
+          codrului. 🌿 Și DA: am ajuns la concluzia că ești mai fericit printre
+          animale, decât printre oameni. De ce? Pentru că animalele știu să-ți
+          redea ce omul îți ia:
+          <strong style="color: #cd5c5c"><em>ZÂMBETUL BUCUROS ☺️</em></strong>
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <p>Copyright&copy; 2025 - Dianaa_Dv</p>
+    </footer>
+
+    <script>
+      //Asteapta ca intregul document HTML sa fie incarcat
+      document.addEventListener("DOMContentLoaded", function () {
+        //Selecteaza butonul dupa ID-ul sau
+        const homeButton = document.getElementById("home-button");
+
+        //Adauga un eveniment de click butonului
+        homeButton.addEventListener("click", function () {
+          //Simuleaza navigarea catre pagina principala (lista de articole)
+          //Inlocuieste 'index.html' cu URL-ul real al paginii tale de baza.
+          const homePageUrl = "../lista-articole.html";
+
+          //Executa navigarea
+          window.location.href = homePageUrl;
+        });
+      });
+    </script>
+  </body>
+</html>

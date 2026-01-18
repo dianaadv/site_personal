@@ -1,0 +1,159 @@
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #444;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    width: 90%;
+    max-width: 650px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    border-top: 5px solid #A0522D;
+    /*O nuanta calda*/
+    text-align: center;
+}
+
+h1 {
+    color: #8B4545;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#text-display {
+    min-height: 120px;
+    text-align: justify;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    padding: 15px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    border-radius: 6px;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option-button {
+    padding: 12px 20px;
+    background-color: #A0522D;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.option-button:hover {
+    background-color: #8B4545;
+}
+
+.option-button:active {
+    transform: scale(0.98);
+}
+
+.result-message {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.hope {
+    background-color: #e6ffe6;
+    color: #228B22;
+    /*Verde pentru speranta*/
+}
+
+.acceptance {
+    background-color: #fff0e6;
+    color: #D2691E;
+    /*Portocaliu-maro pentru acceptare*/
+}
+
+.dispair {
+    background-color: #ffe6e6;
+    color: #CC0000;
+    /*Rosu pentru disperare/regret*/
+}
+
+
+.home-button {
+    /*Asigură-te că butonul rămâne pe loc indiferent de scroll*/
+    position: fixed;
+    /*Poziționează-l în colțul din stânga sus*/
+    top: 20px;
+    /*Distanța de la marginea de sus a ferestrei*/
+    left: 20px;
+    /*Distanța de la marginea din stânga a ferestrei*
+    /*Asigură-te că butonul este deasupra altor elemente de pe pagină*/
+    z-index: 1000;
+}
+
+/*Stilizarea de bază a butonului*/
+.home-button {
+    /*... (Proprietățile de poziționare de mai sus) ...*/
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+
+    /*Stilizarea vizuală*/
+    background-color: #4CAF50;
+    /*Culoare de fundal (ex: albastru)*/
+    color: white;
+    /*Culoare text*/
+    padding: 10px 5px;
+    /*Spațiere interioară (sus/jos și stânga/dreapta)*/
+    text-decoration: none;
+    /*Elimină sublinierea de la link*/
+    border-radius: 5px;
+    /*Margini rotunjite*/
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border: none;
+    /*Elimină chenarul implicit*/
+    cursor: pointer;
+    /*Schimbă cursorul pentru a indica faptul că este interactiv*/
+    transition: background-color 0.3s;
+    /*Adaugă o tranziție fină pentru efectul hover*/
+}
+
+/*Efect la trecerea cu mouse-ul (Hover Effect)*/
+.home-button:hover {
+    background-color: #4CAF50;
+    /*O nuanță mai închisă la hover*/
+}
+
+
+
+
+/*Dacă vrei să arate ca un pătrat sau un cerc (ex: o pictogramă)*/
+/*Poți folosi o pictogramă ”home” în loc de text*/
+/*Exemplu simplu de stilizare a unui buton sub formă de cerc*/
+/*
+.home-button {
+... (proprietățile de poziționare) ...
+background-color: #28a745;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+text-align: center;
+line-height: 40px;
+font-size: 18px;
+...
+}
+*/

@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Episoade Carita de Angel</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #ffe6f0;
+        color: #800040;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        background-color: #ff99cc;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2em;
+      }
+
+      main {
+        padding: 20px;
+        max-width: 1000px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Grid carduri episoade */
+      .episodes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .episode-card {
+        background-color: #ffb3d9;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .episode-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .episode-card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+
+      .episode-card h3 {
+        margin: 5px 0;
+      }
+
+      .play-btn {
+        background-color: #ff80bf;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .play-btn:hover {
+        background-color: #ff4da6;
+      }
+
+      video {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+      }
+
+      .home-btn {
+        background-color: #ffb3d9;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+        margin-bottom: 30px;
+      }
+
+      .home-btn:hover {
+        background-color: #ff80bf;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #ff99cc;
+        margin-top: 30px;
+        width: 100%;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 1.8em;
+        }
+
+        .play-btn,
+        .home-btn {
+          padding: 8px 15px;
+          font-size: 0.9em;
+        }
+      }
+
+      .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /*raport 16:9*/
+        height: 0;
+        overflow: hidden;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200;
+        border: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Carita de Ángel</h1>
+    </header>
+
+    <main>
+      <!-- Grid carduri -->
+      <div class="episodes-grid">
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3185103407698"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3185103407698" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3185904912978?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3185904912978" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3189815118418?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3189815118418" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3191452797522?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3191452797522" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3194197641810?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3194197641810" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3194215926354?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3194215926354" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3195846593106?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3195846593106" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3195865401938?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3195865401938" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src=" https://ok.ru/videoembed/3195870448210?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3195870448210" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src=" https://ok.ru/videoembed/3195876084306?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3195876084306" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3195878836818?nochat=1 
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3195878836818" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src=" https://ok.ru/videoembed/3195884407378?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3195884407378" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3195893910098?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3195893910098" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3195904592466?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3195904592466" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3195929889362?nochat=1 
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3195929889362" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3196130495058?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3196130495058" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3196449655378?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3196449655378" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3198748396114?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3198748396114" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3203260680786?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3203260680786" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3207271877202?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3207271877202" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3207291079250?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3207291079250" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3207856589394?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3207856589394" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3212412783186?nochat=1 
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3212412783186" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3212430019154?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3212430019154" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3212444830290?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3212444830290" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3212485397074?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3212485397074" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3221169769042?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3221169769042" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3223051504210?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3223051504210" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3223224453714?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3223224453714" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3228247132754?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3228247132754" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3230244014674?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3230244014674" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3230275406418?nochat=1 
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3230275406418" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3230294149714?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3230294149714" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3235059665490?nochat=1 
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3235059665490" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3236884187730?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3236884187730" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3236911581778?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3236911581778" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3239759579730?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3239759579730" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3246461553234?nochat=1 
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3246461553234" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3250774215250?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3250774215250" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3253273692754?nochat=1 
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3253273692754" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3262164175442?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3262164175442" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3264451316306?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3264451316306" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3264678529618?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3264678529618" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3266980022866?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3266980022866" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3267020261970?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3267020261970" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3267316484690?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3267316484690" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3268414212690?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3268414212690" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src=" https://ok.ru/videoembed/3272217266770?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3272217266770" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3274930195026?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3274930195026" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3279556905554?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3279556905554" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3279581612626?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3279581612626" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3281726147154?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3281726147154" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3282723474002?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3282723474002" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3283906202194?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3283906202194" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3283927698002?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3283927698002" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3288660511314?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3288660511314" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3290769984082?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3290769984082" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3295290591826?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3295290591826" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3295310580306?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3295310580306" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3307313236562?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3307313236562" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3307494640210?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3307494640210" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3309574490706?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3309574490706" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3309617678930?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3309617678930" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3313799793234?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3313799793234" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3313817094738?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3313817094738" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3325216361042?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3325216361042" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3325235890770?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3325235890770" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3325552495186?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3325552495186" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3325727607378?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3325727607378" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3331064728146?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3331064728146" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3333044767314?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3333044767314" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3335276333650?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3335276333650" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3335292193362?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3335292193362" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3337871100498?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3337871100498" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3338050275922?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3338050275922" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3340455316050?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3340455316050" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3340623743570?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3340623743570" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3340725062226?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3340725062226" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3341583452754?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3341583452754" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3341597280850?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3341597280850" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3342850198098?nochat=1 
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3342850198098" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3342859045458?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3342859045458" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3342869334610?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3342869334610" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3345930783314?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3345930783314" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3345948150354?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3345948150354" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3345972202066?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3345972202066" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3345993960018?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3345993960018" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3346014079570?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3346014079570" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3347926944338?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3347926944338" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3347939199570?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3347939199570" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3347960629842?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3347960629842" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3350379498066?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3350379498066" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3353243552338?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3353243552338" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3356834073170?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3356834073170" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3357195504210?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3357195504210" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3360297388626?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3360297388626" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3362188167762?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3362188167762" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+
+        <div class="episode-card">
+          <iframe
+            width="100%"
+            height="200"
+            src="https://ok.ru/videoembed/3364711631442?nochat=1
+"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            playsinline
+          ></iframe>
+          <p>
+            Dacă playerul se întrerupe pe telefon,
+            <a href="https://ok.ru/video/3364711631442" target="_blank"
+              >deschide video direct aici</a
+            >
+          </p>
+        </div>
+        
+
+      <!-- Buton întoarcere -->
+      <button class="home-btn" onclick="location.href='../index.html'">
+        Înapoi la pagina principală
+      </button>
+    </main>
+
+    <footer>2025 🩷 Fan_Carita_de_Ángel</footer>
+
+    <script>
+      function playEpisode(file) {
+        const player = document.getElementById("videoPlayer");
+        player.src = file;
+        player.play();
+        player.scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>

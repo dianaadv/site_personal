@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HoinarPrinFicțiune</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        text-align: center;
+        background: radial-gradient(
+          ellipse at top,
+          #fdf6f0,
+          #f7e8e1
+        ); /* Setăm un fundal global */
+      }
+
+      #articol-principal {
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        padding: 20px;
+        border-bottom: 2px solid #3366cc;
+        background-color: radial-gradient(ellipse at top, #3366cc, #f7e8e1);
+        border-radius: 20px;
+      }
+
+      #articol-principal h1 {
+        font-weight: bold;
+      }
+
+      .quote-part {
+        background-color: #fffde7; /*Galben foarte deschis*/
+        border: 1px solid #3366cc;
+        border-radius: 5px;
+        text-align: center;
+        border-left: 5px solid #3366cc; /*Bara verde*/
+        font-style: italic;
+        color: #333;
+      }
+
+      /*Subsol (Footer)*/
+      .footer {
+        text-align: center;
+        padding: 15px;
+        margin-top: 20px;
+        color: #777;
+        font-size: 0.8em;
+      }
+
+      .home-button {
+        background: radial-gradient(ellipse at top, #fdf6f0, #f7e8e1);
+        margin: 0;
+        background: rgba(255, 255, 255, 0.92);
+        border: 6px double #3366cc;
+        border-radius: 20px;
+        padding: 10px 15px;
+        position: fixed;
+        cursor: pointer;
+        top: 20px;
+        left: 20px;
+        font-size: small;
+        z-index: 1000;
+      }
+
+      .home-button:hover {
+        background-color: #f7e8e1; /*Galbui la hover*/
+      }
+
+      /*Media Query pentru ecrane mai mici (optional, pentru responsivitate)*/
+      @media (max-width: 600px) {
+        .header {
+          padding: 20px;
+        }
+        .home-button {
+          position: static;
+          display: block;
+          margin-bottom: 10px;
+        }
+        .container {
+          padding: 20px;
+        }
+        .header h1 {
+          font-size: 1.8em;
+        }
+      }
+
+      .frame {
+        max-width: 900px;
+        margin: 60px auto;
+        background: rgba(255, 255, 255, 0.92);
+        border: 6px double #3366cc;
+        border-radius: 20px;
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
+        padding: 50px 70px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(-10%) translateX(0) rotate(10deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(110%) translateX(50px) rotate(10deg);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="../../Hoinar_prin_fictiune/index.html" class="home-button"
+      >🪽Acasă/HoinarPrinFicțiune</a
+    >
+    <article id="articol-principal" class="frame">
+      <h1><strong style="color: black">🪽 Aripa lui Luminel 🪽</strong></h1>
+      <p style="color: blue">
+        <em style="font-weight: bold"
+          >O povestire pentru sufletele care au trecut prin foc, dar încă mai
+          bat</em
+        >
+      </p>
+
+      <p>
+        Demult, într-un colț uitat de lume, în Elarion mai exact, unde
+        <em>ruinele cântă povești vechi, iar vântul șoptește nume uitate</em>,
+        într-o casă care scârțâia a ani și povară, trăia o fetiță pe nume
+        Aelith. Deși toți îi spuneau
+        <strong style="color: #333"><em>copilul cel mic</em></strong
+        >, Aelith simțea că poartă pe umeri toată greutatea unei povești care nu
+        era doar a ei. Nu știa când începuse să doară - poate în ziua în care
+        mama nu s-a mai întors de la spital o vreme, sau poate în ziua în care
+        fratele cel mare a plecat la muncă, cu mâinile crăpate de la frig, deși
+        nu împlinise nici 16 ani.
+      </p>
+
+      <p>
+        Sau poate în ziua în care focul a înghițit casa ei și, odată cu ea, pe
+        Nysera, sora lor cu ochi de păpădie, care nu s-a mai trezit. Atunci,
+        timpul s-a oprit. Pământul s-a deschis sub ei. Iar vina... vina părea că
+        nu voia să moară odată cu tatăl care dăduse foc, beat fiind, unei vieți
+        deja sfărâmate.
+      </p>
+
+      <p>
+        Dar povestea nu începe acolo. Povestea începe într-o noapte adâncă de
+        toamnă, când Aelith, obosită de plânsul pe care nimeni nu-l mai vedea,
+        s-a așezat pe podeaua rece și a spus, nu în cuvinte, ci în gând:
+        <strong style="color: #333"
+          ><em style="color: blue"
+            >”Nu mai pot. Dacă mai există cineva acolo, dă-mi un semn. Oricât de
+            mic.”</em
+          ></strong
+        >
+      </p>
+
+      <p>Și atunci a venit Luminel.</p>
+
+      <p>
+        Nu cu trâmbițe, nici cu aripi uriașe, sau promisiuni goale. Ci ca o
+        prezență caldă, blândă, pe care Aelith n-a putut-o vedea, dar a
+        simțit-o. În camera întunecată, o rază slabă, ca un fir de praf luminat
+        de lună, a dansat în aer, atingându-i degetele.
+      </p>
+
+      <p>
+        Apoi, în sufletul ei, o voce - nu un glas omenesc, ci mai degrabă o
+        senzație - i-a spus:
+        <strong style="color: #333">
+          <em style="color: blue"
+            >”Nu e vina ta. Nici a mamei tale. Nici a fraților tăi. V-ați născut
+            în foc, dar inima voastră e făcută dintr-o lumină pe care niciun
+            întuneric nu o poate stinge.”</em
+          >
+        </strong>
+      </p>
+
+      <p>
+        Aelith a început să respire altfel. Nu s-a vindecat atunci. Nu a râs
+        dintr-o dată. Dar, pentru prima oară, a închis ochii fără frică. A
+        adormit.
+      </p>
+
+      <p>
+        Zilele au trecut. Mama a fost iar internată, iar sora cea mare,
+        Velindra, s-a întors obosită de la al treilea loc de muncă. Fratele,
+        Kaelen, a venit cu mâinile murdare de ciment, dar cu pâine în pungă. Și
+        totuși, ceva era diferit. Nu în afară, ci înăuntru. În Aelith. În modul
+        în care a privit cerul în ziua aceea. În modul în care seara le-a spus
+        celor din casă:
+      </p>
+
+      <p>
+        - Azi am simțit că nu suntem chiar singuri. Nu știu cum să explic. Dar
+        cred că Nysera încă e cu noi. Și cred că mai avem timp. Timp să ne
+        ridicăm. Încet, dar împreună.
+      </p>
+
+      <p>
+        Nimeni nu a zis nimic. Doar mama a lăsat o lacrimă să-i cadă pe mâinile
+        slabe. Kaelen a oftat lung. Iar Velindra s-a așezat lângă Aelith și i-a
+        luat mâna.
+      </p>
+
+      <p>
+        Luminel, din colțul său nevăzut, i-a privit. Și, în tăcerea aceea, o
+        aripă minusculă a luminat o secundă întunericul.
+      </p>
+
+      <p class="quote-part" style="font-weight: bold">
+        Pentru că îngerii nu vin întotdeauna să ne salveze din afară. Uneori, ei
+        vin să ne reaprindă dinăuntru. Iar când inima se aprinde, chiar și după
+        cele mai negre nopți, o viață nouă poate începe...
+      </p>
+    </article>
+
+    <div class="book-container">
+      <div class="book">
+        <div class="page cover">
+          <img src="poza_1.JPG" alt="Copertă: Imagine Inspirațională" />
+          <h1>Aripa care n-a ars</h1>
+          <p>
+            <em style="font-size: small"
+              >O povestire despre foc, dar și despre ce rămâne după el</em
+            >
+          </p>
+        </div>
+
+        <div class="page content-page">
+          <h3>Capitolul 1</h3>
+          <h2><em>Casa care n-a mai fost</em></h2>
+          <p class="quote">
+            Un incendiu care schimbă tot. Povestea unei familii care pierde
+            casa, o fiică și liniștea. Tatăl, sursa suferinței. Ceva se rupe în
+            fiecare dintre ei.
+          </p>
+        </div>
+
+        <div
+          class="page content-page"
+          style="background-image: url(poza_2.JPG)"
+        ></div>
+
+        <div class="page content-page">
+          <h3>Capitolul 2</h3>
+          <h2><em>O mamă de spital</em></h2>
+          <p class="quote">
+            Mama e bolnavă mereu, corpul ei e ca o casă dărâmată. Copiii devin
+            părinți prea devreme. Kaelen muncește de mic. Velindra la fel.
+            Aelith, cea mai mică, învață să se ascundă în gânduri.
+          </p>
+        </div>
+
+        <div class="page content-page">
+          <h3>Capitolul 3</h3>
+          <h2><em>Umbra Nyserei</em></h2>
+          <p class="quote">
+            Nysera, sora care a pierit în incendiu, nu pleacă de tot. Trăiește
+            în amintiri, în vise. Aelith simte că ea o vegheză. Dar și vina
+            apasă peste toți, tăcut.
+          </p>
+        </div>
+
+        <div class="page content-page">
+          <h3>Capitolul 4</h3>
+          <h2><em>Când Cerul ascultă</em></h2>
+          <p class="quote">
+            Într-o noapte de toamnă, Aelith, copleșită de tăcere și durere,
+            rostește un gând către Cer. Apare Luminel - îngerașul invizibil, dar
+            simțit. Un semn. O senzație. Prima speranță după mult timp.
+          </p>
+        </div>
+
+        <div class="page content-page">
+          <h3>Capitolul 5</h3>
+          <h2><em>Lumina nu face zgomot</em></h2>
+          <p class="quote">
+            Viața nu se schimbă brusc. Mama tot e bolnavă, fratele e tot plecat,
+            dar Aelith simte ceva nou în ea. Începe să creadă că durerea lor nu
+            e sfârșitul. Că există un ”după”.
+          </p>
+        </div>
+
+        <div class="page content-page">
+          <h3>Capitolul 6</h3>
+          <h2><em>Despre lucrurile care nu ard</em></h2>
+          <p class="quote">
+            Familia, deși ruptă, începe să respire împreună. Încet. Prin gesturi
+            mici. Printr-o privire, o mână strânsă, o pâine pe masă. Îngerii nu
+            repară totul, dar aprind ceva ce nu mai poate fi stins.
+          </p>
+        </div>
+
+        <div class="page content-page">
+          <h3>Capitolul 7</h3>
+          <h2><em>Aripa care n-a ars</em></h2>
+          <p class="quote">
+            Aelith înțelege că din toate lucrurile care au fost luate, inima e
+            cea care a rămas. Aripa lui Luminel n-a venit să o salveze, ci să o
+            ajute să se ridice singură. Din foc, rămâne aurul curajului.
+          </p>
+        </div>
+
+        <div
+          class="page back-cover"
+          style="background-image: url(../carte_povestire/poza_2.JPG)"
+        >
+          <p class="back-cover">FINAL</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer class="footer" style="color: #333">
+      <p><em> Copyright&copy; 2025 🪽 Aripa-lui-Luminel </em></p>
+    </footer>
+  </body>
+</html>

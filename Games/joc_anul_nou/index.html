@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorcova Magică - Joc de Iarnă</title>
+    <link rel="stylesheet" href="../../Games/joc_anul_nou/style.css" />
+  </head>
+
+  <body>
+    <header class="top-bar">
+      <a href="../../Games/lista-jocuri.html" class="home-button"
+        >Înapoi la Jocuri</a
+      >
+    </header>
+
+    <section class="sorcova-game winter">
+      <h2>Drumul Sorcovei</h2>
+
+      <p id="story-text">
+        În dimineața de 1 Ianuarie, Lunaris, Fiorina și Eldrin pornesc prin sat.
+        Fiecare pas e o urare, fiecare poartă - o speranță.
+      </p>
+
+      <div class="controls">
+        <input type="text" id="playerName" placeholder="Numele Tău" />
+        <button id="themeToggle">Anotimp</button>
+      </div>
+
+      <div class="game-info">
+        🏠 Case colindate: <strong id="score">0</strong>
+      </div>
+
+      <div id="game-area">
+        <div id="child">👧🧒</div>
+        <div id="sorcova">🌿</div>
+      </div>
+
+      <button id="startGame">Pornește colindul</button>
+      <audio id="colindSound" preload="auto">
+        <source src="../joc_anul_nou/urare.mp3" type="audio/mpeg" />
+      </audio>
+    </section>
+
+    <script src="../../Games/joc_anul_nou/script.js"></script>
+  </body>
+</html>

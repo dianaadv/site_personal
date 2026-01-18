@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magia Zilelor de Toamnă</title>
+    <style>
+      /*Stil general*/
+      body {
+        font-family: "Georgia", serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f5f0;
+        color: #2e2e2e;
+        line-height: 1.8;
+        overflow-x: hidden;
+        background: radial-gradient(ellipse at top, #fff8e7, #f9f5f0);
+      }
+
+      /* --- Coperta --- */
+      .hero {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .hero h1 {
+        position: relative;
+        font-size: 2.5em;
+        z-index: 2;
+        margin: 0 20px;
+        font-weight: normal;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        font-style: italic;
+        font-family: fantasy;
+      }
+
+      /* --- Continut articol --- */
+      main {
+        max-width: 800px;
+        margin: 60px auto;
+        background: radial-gradient(ellipse at top, #fff8e7, #fff);
+        padding: 40px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+      }
+
+      p {
+        margin-bottom: 20px;
+        text-align: justify;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      .btn-back {
+        display: block;
+        width: fit-content;
+        margin: 30px auto 0;
+        padding: 10px 20px;
+        background: radial-gradient(ellipse at top, #fff8e7, #7a4a1a);
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+
+      .btn-back:hover {
+        background: #99612a;
+      }
+
+      /* --- Buton gand frumos --- */
+      .btn-gand {
+        display: block;
+        margin: 30px auto;
+        padding: 12px 25px;
+        background: radial-gradient(ellipse at top, #605a31, #fff8e7);
+        color: #fff;
+        font-size: 17px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+      }
+
+      .btn-gand:hover {
+        background-color: #b87535;
+        transform: scale(1.05);
+      }
+
+      /* --- Bilet animat --- */
+      .bilet {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        background-color: #fff8e7;
+        color: #5a3a1a;
+        padding: 25px 30px;
+        border: 2px solid #d1a86d;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        font-style: italic;
+        z-index: 9999;
+        animation: apareBilet 0.4s ease forwards;
+      }
+
+      @keyframes apareBilet {
+        from {
+          opacity: 0;
+          transform: translate(-50%, -60%) scale(0.5);
+        }
+        to {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+
+      .bilet button {
+        margin-top: 15px;
+        background-color: #7a4a1a;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .bilet button:hover {
+        background-color: #99612a;
+      }
+
+      /* --- Frunza animata --- */
+      .frunza {
+        position: fixed;
+        top: -50px;
+        font-size: 28px;
+        opacity: 0.9;
+        animation: cadereFrunza 4s ease-in forwards;
+        z-index: 10000;
+        pointer-events: none;
+      }
+
+      @keyframes cadereFrunza {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+        }
+        50% {
+          transform: translateY(200px) rotate(180deg);
+          opacity: 0.9;
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      footer {
+        background: radial-gradient(ellipse at top, #fff8e7, #5a3a1a);
+        color: #0c0b0b;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 50px;
+        font-size: 0.9em;
+      }
+
+      footer p {
+        margin: 0;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          height: 220px;
+        }
+        .hero h1 {
+          font-size: 1.8em;
+        }
+        main {
+          margin: 30px 15px;
+          padding: 25px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Imagine coperta -->
+    <div class="hero">
+      <h1>Magia Toamnei</h1>
+    </div>
+
+    <main>
+      <p>
+        Toamna este anotimpul care ne învață despre schimbare, despre frumusețea
+        trecerii și despre liniștea interioară. E momentul în care natura își
+        lasă frunzele să cadă, nu din tristețe, ci ca un act de eliberare. Sub
+        pașii noștri, covorul arămiu foșnește ușor, iar vântul poartă cu sine
+        povești dintr-un anotimp care îmbină sfârșitul cu un nou început.
+      </p>
+
+      <p>
+        Soarele, deși mai blând, își păstrează farmecul cald și aurit. Razele
+        lui par să mângâie totul cu o lumină nostalgică, în timp ce aerul devine
+        mai clar, mai rece, dar cumva mai sincer. În această lumină filtrată de
+        frunze, orașele și satele capătă o poezie aparte - aceea a lucrurilor
+        care se retrag în tăcere, pentru a renaște mai târziu.
+      </p>
+
+      <p>
+        În suflet, toamna aduce introspecție. E anotimpul ceaiului aburind, al
+        serilor petrecute cu o carte bună și al gândurilor care se aștern încet,
+        asemenea frunzelor. E o invitație la echilibru, la simplu și la
+        recunoștință. Poate că nu întâmplător, toamna e și momentul în care
+        simțim cel mai mult dorul - de locuri, de oameni, de clipe trecute.
+      </p>
+
+      <p>
+        Culorile ei, de la roșu intens la auriu pal, ne amintesc că frumusețea
+        nu dispare odată cu schimbarea, ci se transformă. Fiecare frunză căzută
+        e un mic adio, dar și o promisiune că viața își va continua ciclul. E
+        lecția naturii despre acceptare și reînnoire - un mesaj de care, poate,
+        avem cu toții nevoie.
+      </p>
+
+      <p>
+        Așa e toamna: o poezie scrisă de timp, o muzică a tăcerii și o amintire
+        caldă în inima fiecărui om. Ne aduce aminte că uneori, pentru a merge
+        mai departe, trebuie doar să lăsăm frunzele să cadă.
+      </p>
+
+      <!-- Buton pentru gand frumos -->
+      <button class="btn-gand" id="btnGand">
+        🍂 Apasă pentru un gând frumos 🍂
+      </button>
+
+      <!-- Buton Inapoi -->
+      <a href="../lista-articole.html" class="btn-back"
+        >⬅️ Blog/ Lista Articolelor Principale</a
+      >
+    </main>
+
+    <footer>
+      <p>2025 | Creat cu drag 💛</p>
+    </footer>
+
+    <script>
+      const ganduri = [
+        "Toamna nu este sfârșitul, ci începutul unui alt fel de frumos.",
+        "Uneori, frunzele care cad ne învață cum să renunțăm elegant.",
+        "Respiră aerul rece al toamnei - e plin de liniște și speranță.",
+        "În fiecare frunză ce cade, e o poveste care își găsește odihna.",
+        "Toamna ne amintește că schimbarea poate fi o formă de frumusețe.",
+        "Chiar și apusurile reci pot încălzi sufletele care știu să privească.",
+      ];
+
+      const btnGand = document.getElementById("btnGand");
+      btnGand.addEventListener("click", () => {
+        //Elimina orice bilet existent inainte sa afiseze altul
+        const biletExistent = document.querySelector(".bilet");
+        if (biletExistent) biletExistent.remove();
+
+        //Alege un gand aleatoriu
+        const randomIndex = Math.floor(Math.random() * ganduri.length);
+        const gand = ganduri[randomIndex];
+
+        //Creeaza biletul
+        const bilet = document.createElement("div");
+        bilet.className = "bilet";
+        bilet.innerHTML = `
+        <p>${gand}</p>
+        <button id="inchideBilet">Închide</button>`;
+
+        document.body.appendChild(bilet);
+
+        //Adauga efect de frunza care cade
+        const frunza = document.createElement("div");
+        frunza.className = "frunza";
+        frunza.textContent = "🍂";
+        frunza.style.left = Math.random() * 90 + "%";
+        document.body.appendChild(frunza);
+
+        //Sterge frunza dupa ce termina animatia
+        setTimeout(() => frunza.remove(), 4000);
+
+        //Butonul de inchidere functioneaza corect pentru fiecare nou bilet
+        const butonInchide = bilet.querySelector("button");
+        butonInchide.addEventListener("click", () => {
+          bilet.remove();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+/*RESET de bază*/
+body {
+    font-family: 'Georgia', serif;
+    /*Font clasic, ușor de citit*/
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    /*Fundal moale, deschis*/
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/*Stil pentru Articolul Principal*/
+.blog-post {
+    max-width: 800px;
+    /*Lățime optimă pentru citit*/
+    margin: 50px auto;
+    /*Centrarea pe pagină*/
+    padding: 30px 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*Umbră subtilă*/
+    border-radius: 8px;
+}
+
+/*Secțiunea Header (Titlu)*/
+header {
+    text-align: center;
+    border-bottom: 2px solid #a9cce3;
+    /*Linie separatoare*/
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.author-info {
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+/*Secțiunea Principală (Conținut)*/
+h2 {
+    color: #3498db;
+    /*Culoare de accent, prietenoasă*/
+    font-size: 1.8em;
+    margin-top: 30px;
+    border-left: 5px so #3498db;
+    padding-left: 15px;
+}
+
+h3 {
+    color: #2c3e50;
+    font-size: 1.3em;
+    margin-top: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.intro {
+    font-size: 1.1em;
+    font-style: italic;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-left: 5px solid #a9cce3;
+}
+
+/*Stil pentru lista de exerciții*/
+.exercitii ol {
+    list-style-type: none;
+    /*Elimină bulinele standard*/
+    padding-left: 0;
+}
+
+.exercitii li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px dashed #a9cce3;
+}
+
+.exercitii li strong {
+    color: #e74c3c;
+    /*Culoare puternică pentru citate sau chei*/
+}
+
+/*Secțiunea Footer*/
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 0.8em;
+    color: #7f8c8d;
+}
+
+.imagine-blog {
+    /*Asigură-te că imaginea nu depășește lățimea conținutului*/
+    max-width: 100%;
+    /*Menține proporțiile imaginii când se redimensionează*/
+    height: auto;
+
+    /*Centrare (dacă este un element de tip block) și spațiere*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*Adaugă spațiu deasupra și dedesubtul imaginii pentru a o separa de text*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    /*Un stil opțional pentru a o face să arate mai bine, de exemplu un colț rotunjit*/
+    border-radius: 8px;
+    /*O mică umbră pentru un efect de adâncime*/
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.top-bar {
+    /*1. Asigură-te că ocupă toată lățimea*/
+    width: 100%;
+    /*Centrează conținutul inline (butonul)*/
+    text-align: center;
+    color: #4CAF50;
+
+    /*Spațiere (Opțional)*/
+    padding: 15px 0;
+}
+
+/*Stiluri de bază pentru buton (pentru aspect)*/
+.home-button {
+    /*Setarea display-ului pe inline-block e opțională, dar bună pentru a aplica paddingul/margin*/
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    position: fixed;
+    background: radial-gradient(ellipse at top, #fdf6f0, #3498db);
+    border: 6px double #3498db;
+
+
+    /*Alte stiluri...*/
+}

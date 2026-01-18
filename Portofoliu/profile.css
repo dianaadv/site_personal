@@ -1,0 +1,277 @@
+/*Stiluri de bază*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    /*Un fundal ușor gri*/
+    color: #333;
+    /*Textul ptincipal negru*/
+}
+
+/*Container pentru centrare*/
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+    /*Fontul principal, clar*/
+    text-transform: uppercase;
+    /*Il face sa para mai oficial*/
+    letter-spacing: 2px;
+    /*Adauga putin spatiu intre litere*/
+}
+
+/*Antet (Header)*/
+header {
+    background: radial-gradient(ellipse at top, #bda3e6, #f7e8e1);
+    /*O culoare mov plăcută*/
+    color: black;
+    padding: 1em 0;
+    text-align: center;
+    border-bottom: 5px solid #833af9;
+}
+
+header h1 {
+    margin-bottom: 0.1em;
+}
+
+.buton-acasă {
+    /*Poziționare fixă în colțul paginii*/
+    position: fixed;
+    top: 100px;
+    /*Distanță de 50 de pixeli de marginea de sus*/
+    left: 10px;
+    /*Distanță de 20 de pixeli de marginea din stânga*/
+    z-index: 1000;
+    /*Asigură că butonul apare deasupra altor elemente*/
+
+    /*Stil pentru a arăta ca un buton*/
+    display: inline-block;
+    padding: 0 15px;
+
+    /*Un albastru frumos*/
+    color: black;
+    /*Text alb*/
+    text-decoration: none;
+    /*Elimină sublinierea specifică link-urilor*/
+    border-radius: 15px;
+    /*Colțuri rotunjite*/
+    font-family: 'Sacramento', cursive;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    /*Efect subtil la hover*/
+    border: 4px double #bda3e6;
+}
+
+/*Schimbă culoarea la trecerea cu mouse-ul*/
+.buton-acasă:hover {
+    background: radial-gradient(ellipse at top, #bda3e6, #f7e8e1);
+}
+
+/*Secțiuni principale*/
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+    /*Fundal alb pentru secțiuni*/
+    border-radius: 8px;
+    /*Colțuri rotunjite*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /*Umbră ușoară*/
+}
+
+section h2 {
+    color: #833af9;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/*Liste (Abilități și Contact)*/
+#abilități ul,
+#contact ul {
+    list-style: none;
+    /*Elimină bulinele*/
+    padding: 0;
+
+}
+
+#abilități li {
+    background: #e9ecef;
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 5px solid #833af9;
+    border-radius: 10px;
+}
+
+/*Imagine de profil (dacă o adaugi)*/
+.profil-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 40%;
+    /*Face imaginea rotundă*/
+    object-fit: cover;
+    display: block;
+    margin: 15px auto;
+    border: 3px solid #833af9;
+}
+
+#portofoliu {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.proiect-card {
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: white;
+    transition: transform 0.3s;
+}
+
+.proiect-card:hover {
+    transform: translateY(-5px);
+    /*Efect subtil de ridicare*/
+}
+
+.proiect-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.puncte-atinse ul li {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    color: #555;
+}
+
+.buton-abilitate {
+    border-radius: 10px;
+}
+
+
+
+.tehnologii span {
+    background: #eee;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    color: #555;
+}
+
+.btn-proiect {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ff0055;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Subsol (Footer)*/
+footer {
+    background: radial-gradient(ellipse at top, #bda3e6, #f7e8e1);
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/*Link-uri*/
+a {
+    color: #833af9;
+    text-decoration: none;
+    /*Fără subliniere*/
+}
+
+a:hover {
+    text-decoration: underline;
+    /*Subliniere la hover*/
+}
+
+/*Ascunde toate elementele care au clasa 'detalii-ascunse'*/
+.detaliu-ascuns {
+    /*Aceasta este cheia. Ascunde complet elementul.*/
+    display: none;
+
+    /*Poți adăuga stiluri suplimentare, dar 'display: none;' e esențial*/
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: #d2bef1;
+    border-radius: 25px;
+}
+
+/*Clasa pe care o vom adăuga cu JavaScript pentru a le afișa*/
+.detalii-vizibile {
+    display: block;
+}
+
+#contact-modern {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    /*Un fundal foarte deschis pentru contrast*/
+    text-align: center;
+}
+
+.container-contact {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.grup-input {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.grup-input label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.grup-input input,
+.grup-input textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+/*Efectul cand dai click in casuta*/
+.grup-input input:focus,
+.grup-input textarea:focus {
+    border-color: #ff0055;
+}
+
+.btn-trimite {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff0055;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-trimite:hover {
+    background-color: #e6004d;
+    transform: translateY(-2px);
+    /*Se ridica putin*/
+}

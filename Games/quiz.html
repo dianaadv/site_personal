@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jocuri</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a href="lista-jocuri.html" class="home-button">Înapoi la Jocuri</a>
+    <div class="quiz-container">
+      <h1>🦌 Găsește-ți calitatea de căprioară 🦌</h1>
+      <p>
+        Alege opțiunea care te reprezintă cel mai bine pentru fiecare întrebare
+        :
+      </p>
+
+      <div class="question" id="q1">
+        <h3>1. Când ești stresat(ă), prima ta reacție este să...</h3>
+        <label for=""
+          ><input type="radio" name="q1" value="A" />Te miști mai mult, faci
+          curat, te plimbi. (Grație)</label
+        ><br />
+        <label for=""
+          ><input type="radio" name="q1" value="B" />Te așezi undeva liniștit(ă)
+          și respiri adânc. (Liniște)</label
+        ><br />
+        <label for="">
+          <input type="radio" name="q1" value="C" />Cauți informații despre
+          problema ta. (Atenție)</label
+        >
+      </div>
+
+      <div class="question" id="q2">
+        <h3>2. Când ești într-un grup, tu...</h3>
+        <label for="">
+          <input type="radio" name="q2" value="A" />Dansezi, glumești și ești în
+          centrul acțiunii. (Grație)</label
+        ><br />
+        <label for=""
+          ><input type="radio" name="q2" value="B" />Observi oamenii și savurezi
+          un colț liniștit. (Liniște)</label
+        ><br />
+        <label for=""
+          ><input type="radio" name="q2" value="C" />Îi asculți pe ceilalți cu
+          atenție. (Atenție)</label
+        >
+      </div>
+
+      <div class="question" id="q3">
+        <h3>3. Proiectul tău ideal ar fi...</h3>
+        <label for=""
+          ><input type="radio" name="q3" value="A" />Să fie frumos, estetic și
+          bine prezentat. (Grație)</label
+        ><br />
+        <label for=""
+          ><input type="radio" name="q3" value="B" />Să aducă pace și calm în
+          viața ta. (Liniște)</label
+        ><br />
+        <label for=""
+          ><input type="radio" name="q3" value="C" />Să fie bine documentat și
+          fără greșeli. (Atenție)</label
+        >
+      </div>
+
+      <button onclick="calculateResult()">Află-ți Calitatea!</button>
+
+      <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

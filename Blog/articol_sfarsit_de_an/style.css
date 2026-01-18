@@ -1,0 +1,131 @@
+/*Resetăm stilurile de bază pentru o pagină curată*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Definim fonturi generale*/
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('IMG_1337.jpg');
+    /*URL-ul imaginii tale*/
+    background-size: cover;
+    /*Face imaginea sa ocupe tot ecranul*/
+    background-position: center;
+    background-attachment: fixed;
+    /*Imaginea ramane fixa cand derulezi*/
+    color: #FF6F61;
+    line-height: 1.6;
+    padding: 20px;
+    height: 100vh;
+    /*Inaltimea fundalului*/
+}
+
+/*Container pentru centrare si latimea articolelor*/
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    /*Adaugam un fundal alb cu transparenta*/
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+/*Header cu fonturi mari si festive*/
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #FF6F61;
+    /*Verde pentru energie si speranta*/
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: rgb(228, 8, 8);
+}
+
+/*Stiluri pentru fiecare sectiune de articol*/
+article h2 {
+    font-size: 2rem;
+    color: #FF6F61;
+    /*Culoare festiva, calda (nuanta de rosu)*/
+    margin-top: 30px;
+}
+
+article p {
+    font-size: 1.1rem;
+    color: rgb(248, 241, 241);
+    margin-bottom: 20px;
+}
+
+/*Footer simplu, dar elegant*/
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+footer p {
+    font-style: italic;
+}
+
+/*Adaugam efecte de hover pentru linkuri*/
+a {
+    color: #FF6F61;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*Adaugam un gradient la footer pentru un efect mai modern*/
+footer {
+    background: linear-gradient(135deg, rgba(255, 105, 97, 0.8), rgba(255, 158, 158, 0.8));
+    color: white;
+    padding: 15px 0;
+    border-radius: 10px;
+    border: 6px double #a9cce3;
+}
+
+/*Animatii pentru header*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    animation: fadeIn 1s ease-out;
+}
+
+.home-button {
+    background-color: pink;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: 6px double #a9cce3;
+    font-size: small;
+
+}
+
+.home-button:hover {
+    background-color: palevioletred;
+}

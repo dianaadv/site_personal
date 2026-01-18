@@ -1,0 +1,146 @@
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    /*Fundal usor gri*/
+    font-family: Arial, sans-serif;
+}
+
+.book-container {
+    /*Containerul principal al cartii*/
+    perspective: 1000px;
+    /*Ajuta la efectele 3D, chiar daca nu le folosim acum*/
+    width: fit-content;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book {
+    width: 300px;
+    /*Latimea cartii*/
+    height: 450px;
+    /*Inaltimea cartii*/
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /*Umbra pentru a arata ca un teanc*/
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*Stil specific pentru COPERTA*/
+.cover {
+    background-color: #f7e8e1;
+    /*Culoare diferita pentru coperta (verde)*/
+    color: black;
+    z-index: 10;
+    /*Asigura ca e deasupra tuturor*/
+}
+
+.cover img {
+    width: 80%;
+    height: auto;
+    max-height: 60%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.cover h1 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/*Stil pentru paginile de CONTINUT*/
+.content-page {
+    background-color: #f7e8e1;
+    color: #333;
+    padding-top: 50px;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.author {
+    margin-top: 30px;
+    text-align: right;
+    font-weight: bold;
+}
+
+/*NOU: Asigura-te ca toate paginile sunt suprapuse initial*/
+.page {
+    /*Pastreaza stilurile anterioare: position: absolute, width, height etc*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*Toate paginile, cu exceptia copertei, sunt ascunse la dreapta*/
+    transform: translateX(100%);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+    /*Pentru o animatie fluida*/
+}
+
+/*NOU: Coperta si prima pagina trebuie sa fie vizibile de la inceput*/
+.cover,
+.book .page:nth-child(2) {
+    /*Prima pagina de continut*/
+    transform: translateX(0);
+}
+
+/*NOU: Clasa care activeaza rasfoirea (rotirea)*/
+.flipped {
+    /*Rasfoieste pagina complet spre stanga*/
+    transform: rotateY('-180deg');
+    /*Asigura-te ca pagina rasfoita trece de celelalte*/
+    z-index: 99 !important;
+}
+
+.back-cover {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+/*Media Query pentru ecrane mai mici (optional, pentru responsivitate)*/
+@media (max-width: 600px) {
+    .header {
+        padding: 20px;
+    }
+
+    .home-button {
+        position: static;
+        display: block;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+}
